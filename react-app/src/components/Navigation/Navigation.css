@@ -5,3 +5,24 @@
 .hidden {
   display: none;
 }
+
+
+.nav-bar {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.home-button {
+  width: 50px; /* adjust this as needed */
+  margin-left: 40px;
+  margin-top: 20px;
+}

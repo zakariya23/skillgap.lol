@@ -4,6 +4,10 @@ import { logout } from "../../store/session";
 import OpenModalButton from "../OpenModalButton";
 import LoginFormModal from "../LoginFormModal";
 import SignupFormModal from "../SignupFormModal";
+import './ProfileButton.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
@@ -39,8 +43,20 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <button onClick={openMenu}>
-        <i className="fas fa-user-circle" />
+      <button onClick={openMenu} className="profile-button">
+      <FontAwesomeIcon
+  icon={faBars}
+  style={{
+    position: "absolute",
+    width: "42px",
+    right: "80px",
+    top: "-4px",
+    bottom: "2.7px",
+    color: "#16AE1A"
+  }}
+  className="fas fa-bars"
+  size="3x"
+/>
       </button>
       <ul className={ulClassName} ref={ulRef}>
         {user ? (
